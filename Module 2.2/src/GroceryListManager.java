@@ -1,59 +1,51 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 
-public class GroceryListManager{
-    public static void main(String[] args){
+public class GroceryListManager {
+
+    public static void main(String[] args) {
         GroceryListManager groceryListManager = new GroceryListManager();
 
         groceryListManager.addItem("Milk", 2.50, "Dairy");
         groceryListManager.addItem("Apple", 1.20, "Fruits");
         groceryListManager.addItem("Bread", 3.00, "Bakery");
+        groceryListManager.addItem("Cheese", 4.00, "Dairy");
 
-
-
-        System.out.println("grocery List: ");
+        System.out.println("Grocery List:");
         groceryListManager.displayList();
+
         System.out.println("Is Milk on the list? " + groceryListManager.checkItem("Milk"));
         System.out.println("Is Eggs on the list? " + groceryListManager.checkItem("Eggs"));
+        System.out.println("Dairy items:");
+        groceryListManager.displayByCategory("Dairy");
         groceryListManager.removeItem("Apple");
         System.out.println("Updated Grocery List:");
         groceryListManager.displayList();
+
         System.out.println("Total cost: " + groceryListManager.calculateTotalCost());
-
-        groceryListManager.addItem("Cheese", 4.00, "Dairy");
-        groceryListManager.addItem("Banana", 1.10, "Fruits");
-        groceryListManager.addItem("Yogurt", 1.80, "Dairy");
-        System.out.println("Dairy items:");
-        groceryListManager.displayByCategory("Dairy");
-
-
-
-
-
     }
+
     private HashMap<String, Double> groceryList = new HashMap<>();
     private HashMap<String, String> categories = new HashMap<>();
-
-
-    public void addItem(String item, double cost,String category) {
+    public void addItem(String item, double cost) {
+        groceryList.put(item, cost);
+    }
+    public void addItem(String item, double cost, String category) {
         groceryList.put(item, cost);
         categories.put(item, category);
     }
-
-    public void removeItem(String item){
+    public void removeItem(String item) {
         groceryList.remove(item);
-
-
+        categories.remove(item);
     }
-    public void displayList(){
-        for(String item : groceryList.keySet()){
+
+    public void displayList() {
+        for (String item : groceryList.keySet()) {
             System.out.println(item);
         }
     }
 
     public boolean checkItem(String item) {
         return groceryList.containsKey(item);
-
     }
 
     public double calculateTotalCost() {
@@ -71,5 +63,4 @@ public class GroceryListManager{
             }
         }
     }
-
 }
