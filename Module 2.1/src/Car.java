@@ -1,10 +1,9 @@
-
 public class Car {
 
-    private double speed;
-    private double gasolineLevel;
+    protected double speed;
+    protected double gasolineLevel;
     private String typeName;
-    private double tankCapacity;
+    protected double tankCapacity;
 
     public Car(String typeName) {
         speed = 0;
@@ -20,10 +19,15 @@ public class Car {
         this.gasolineLevel = 0;
     }
 
+    protected double getConsumption() {
+        return 1;
+    }
+
     public void accelerate() {
-        if (gasolineLevel > 0)
+        if (gasolineLevel > 0) {
             speed += 10;
-        else
+            gasolineLevel = Math.max(0, gasolineLevel - getConsumption());
+        } else
             speed = 0;
     }
 
