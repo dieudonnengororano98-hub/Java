@@ -9,7 +9,7 @@ public class GroceryListManager {
     }
 
     public static void testTotalCost() {
-        System.out.println("Test: Total Cost");
+        System.out.println("Test Total Cost");
         GroceryListManager manager = new GroceryListManager();
 
         manager.addItem("Milk", 2.50, "Dairy", 2);
@@ -23,7 +23,7 @@ public class GroceryListManager {
     }
 
     public static void testCategories() {
-        System.out.println("Test: Categories ");
+        System.out.println("Test: Categories");
         GroceryListManager manager = new GroceryListManager();
 
         manager.addItem("Milk", 2.50, "Dairy", 2);
