@@ -23,6 +23,7 @@ public class Bus extends Car {
         }
         return false;
     }
+    
 
     public int getPassengers() {
         return passengers;
