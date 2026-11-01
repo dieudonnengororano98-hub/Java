@@ -19,5 +19,5 @@ public class VehicleDemo {
         System.out.println(vehicle.getInfo());
         System.out.println("Fuel efficiency: " + vehicle.calculateFuelEfficiency() + " " + unit);
         System.out.println();
-    }
+    } 
 }
