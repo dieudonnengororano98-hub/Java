@@ -4,7 +4,7 @@ public class Motorcycle extends AbstractVehicle {
 
     public Motorcycle(String color) {
         super("Motorcycle", "Gasoline", 0.05);
-        this.color = color;
+        this.color = color; 
     }
 
     @Override
