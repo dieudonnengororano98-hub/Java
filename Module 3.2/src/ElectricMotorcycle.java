@@ -17,4 +17,4 @@ public class ElectricMotorcycle extends AbstractVehicle {
         return super.getInfo() + "\n" +
                 "Color: " + color;
     }
-}
+} 
