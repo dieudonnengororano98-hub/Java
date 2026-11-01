@@ -3,4 +3,4 @@ public interface Vehicle {
     void stop();
     String getInfo();
     double calculateFuelEfficiency();
-}
+} 
