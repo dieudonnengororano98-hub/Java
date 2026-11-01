@@ -4,7 +4,7 @@ public class BankAccount {
     private int accountNumber;
     private double balance;
 
-    public BankAccount(double initialBalance) {
+    public BankAccount(double initialBalance) { 
         totalAccounts++;
         this.accountNumber = totalAccounts;
         this.balance = initialBalance;
