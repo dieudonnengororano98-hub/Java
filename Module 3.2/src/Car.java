@@ -7,7 +7,7 @@ public class Car extends AbstractVehicle {
         this.color = color;
     }
 
-    @Override
+    @Override 
     public String getInfo() {
         return super.getInfo() + "\n" +
                 "Color: " + color;
