@@ -7,7 +7,7 @@ public class LibraryMember {
     private String name;
     private int memberId;
     private List<Book> borrowedBooks = new ArrayList<>();
-    private List<Book> reservedBooks = new ArrayList<>();
+    private List<Book> reservedBooks = new ArrayList<>(); 
 
     public LibraryMember(String name, int memberId) {
         this.name = name;

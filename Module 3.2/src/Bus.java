@@ -1,6 +1,6 @@
 public class Bus extends AbstractVehicle {
 
-    private int capacity;
+    private int capacity; 
 
     public Bus(int capacity) {
         super("Bus", "Diesel", 0.35);

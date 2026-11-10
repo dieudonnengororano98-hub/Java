@@ -1,7 +1,7 @@
 public abstract class AbstractVehicle implements Vehicle, ElectricVehicle {
 
     private String type;
-    private String fuel;
+    private String fuel; 
     private double fuelEfficiency;
 
     public AbstractVehicle(String type, String fuel, double fuelEfficiency) {

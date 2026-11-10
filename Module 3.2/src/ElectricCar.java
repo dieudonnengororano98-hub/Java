@@ -1,6 +1,6 @@
 public class ElectricCar extends AbstractVehicle {
 
-    private String color;
+    private String color; 
 
     public ElectricCar(String color) {
         super("Electric Car", "Electricity", 0.15);
