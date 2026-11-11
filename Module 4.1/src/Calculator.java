@@ -1,6 +1,6 @@
 public class Calculator {
     private int value;
-
+ 
     public void reset() {
         value = 0;
     }
