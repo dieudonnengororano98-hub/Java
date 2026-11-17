@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>Module 6</module>
+        <module>Module 62</module>
     </modules>
 
     <properties>
