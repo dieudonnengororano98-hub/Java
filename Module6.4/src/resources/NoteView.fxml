@@ -1,0 +1,63 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/27"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.NoteController"
+            prefWidth="600"
+            prefHeight="450">
+
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="10" left="15"/>
+            </padding>
+
+            <Label text="My Notebook"
+                   style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+            <TextField fx:id="titleField"
+                       promptText="Enter note title..."/>
+
+            <TextArea fx:id="contentArea"
+                      promptText="Enter note content..."
+                      prefRowCount="5"
+                      wrapText="true"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="5" right="15" bottom="5" left="15"/>
+            </padding>
+
+            <Label text="Saved Notes"/>
+
+            <ListView fx:id="notesList"
+                      VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="Add Note"
+                    onAction="#handleAdd"/>
+
+            <Button text="Update Note"
+                    onAction="#handleUpdate"/>
+
+            <Button text="Delete Note"
+                    onAction="#handleDelete"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
