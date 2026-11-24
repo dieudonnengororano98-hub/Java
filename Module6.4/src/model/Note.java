@@ -1,6 +1,8 @@
-package main.notes;
 
-class Note {
+package model;
+
+public class Note {
+
     private String title;
     private String content;
 
@@ -23,5 +25,10 @@ class Note {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    @Override
+    public String toString() {
+        return title + " - " + content;
     }
 }
