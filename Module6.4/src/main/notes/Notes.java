@@ -1,4 +1,4 @@
-package notes;
+package main.notes;
 
 class Note {
     private String title;
